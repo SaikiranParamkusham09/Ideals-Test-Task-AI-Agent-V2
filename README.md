@@ -1,61 +1,143 @@
-# Recruitment System Prototype
+# Agentic Recruitment System
 
-A Streamlit-based recruitment system that uses AI to assess candidates based on their resumes and job postings.
+A modern, AI-powered recruitment system that leverages agent-based architecture to automate and streamline the hiring process.
 
 ## Features
 
-- View and select job postings
-- Browse candidate applications
-- AI-powered candidate assessment using Google's Gemini
-- Rate-limited API calls to prevent overuse
-- Simple and intuitive user interface
-- Local JSON storage to prevent API rate limiting
+### Core Capabilities
+- **Autonomous Decision Making**: AI-powered candidate evaluation and decision making
+- **Automated Communication**: Intelligent email and interview scheduling
+- **Interactive UI**: Streamlit-based user interface for seamless interaction
+- **State Management**: Persistent storage of candidate data and system state
+- **Multi-stage Workflow**: Comprehensive recruitment pipeline management
 
-## Setup
+### Agent-Based Architecture
+- **UIAgent**: Manages user interface and interaction
+- **DataAgent**: Handles data persistence and retrieval
+- **AssessmentAgent**: Evaluates candidates and makes decisions
+- **WorkflowAgent**: Orchestrates the recruitment process
+- **CommunicationAgent**: Manages candidate communications
 
-1. Install the required dependencies:
+## 🛠️ Technical Stack
+
+- **Frontend**: Streamlit
+- **AI/ML**: Google Gemini AI
+- **Data Storage**: JSON-based state management
+- **Email Integration**: SMTP for automated communications
+- **Calendar Integration**: Calendly for interview scheduling
+
+## 📋 Prerequisites
+
+- Python 3.8+
+- Google Gemini AI API key
+- SMTP server credentials
+- Calendly API access
+
+## 🔧 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/SaikiranParamkusham09/Ideals.git
+cd Ideals
+```
+
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Fetch the initial data (only needs to be done once):
-```bash
-python fetch_data.py
+3. Set up environment variables:
+Create a `.env` file with the following:
+```
+GEMINI_API_KEY=your_gemini_api_key
+EMAIL_USER=your_email
+EMAIL_PASSWORD=your_email_password
+CALENDLY_API_KEY=your_calendly_api_key
 ```
 
-3. Run the Streamlit application:
+## 🚀 Usage
+
+1. Start the application:
 ```bash
 streamlit run app.py
 ```
 
-## Usage
+2. Access the UI at `http://localhost:8501`
 
-1. Select a job posting from the sidebar
-2. Choose a candidate from the dropdown menu
-3. Click "Assess Candidate" to get an AI-powered assessment
-4. Review the assessment results including:
-   - Suitability score
-   - Key strengths
-   - Areas for improvement
-   - Overall recommendation
+## 📁 Project Structure
 
-## Data Storage
+```
+Ideals/
+├── app.py                 # Main application entry point
+├── tools.py              # Agent implementations and utilities
+├── requirements.txt      # Project dependencies
+├── .env                  # Environment variables
+├── solution_architecture.txt  # System architecture documentation
+├── technical_implementation.txt  # Technical implementation details
+├── implementation_plan.txt      # Project implementation roadmap
+└── technical_presentation.txt   # Technical presentation materials
+```
 
-The application stores job postings and candidate data locally in JSON files:
-- `data/postings.json`: Contains all job posting information
-- `data/candidates.json`: Contains candidate information including resume URLs
+## 🔄 Workflow
 
-## API Endpoints
+1. **Candidate Entry**: New candidates are added through the UI
+2. **AI Assessment**: System evaluates candidates using Gemini AI
+3. **Decision Making**: Automated decisions based on assessment
+4. **Communication**: Automated email notifications and interview scheduling
+5. **State Updates**: Real-time status updates and tracking
 
-The application uses the following mock API endpoints:
-- Job Postings: `https://fd4c61a1-d161-4de2-92e4-50fd468a8e82.mock.pstmn.io/postings`
-- Candidates: `https://fd4c61a1-d161-4de2-92e4-50fd468a8e82.mock.pstmn.io/candidates`
-- Resumes: `https://f000.backblazeb2.com/file/BPA-Candidates/`
+## 🎯 Key Features
 
-## Rate Limiting
+### Autonomous Decision Making
+- AI-powered candidate evaluation
+- Automated stage transitions
+- Intelligent decision recommendations
 
-The application includes basic rate limiting to prevent overuse of the Gemini API. A 1-second delay is added between assessments.
+### Communication Automation
+- Automated email notifications
+- Interview scheduling via Calendly
+- Status updates and reminders
 
-## Note
+### Data Management
+- Persistent JSON storage
+- Real-time state updates
+- Comprehensive candidate tracking
 
-This is a prototype system. The resume parsing functionality is currently a placeholder and would need to be implemented with proper PDF parsing capabilities in a production environment. 
+## 🔮 Future Enhancements
+
+1. **Advanced AI Capabilities**
+   - Enhanced candidate evaluation
+   - Predictive analytics
+   - Automated interview feedback
+
+2. **Integration Expansions**
+   - Additional communication channels
+   - Advanced scheduling features
+   - Analytics dashboard
+
+3. **UI Improvements**
+   - Enhanced visualization
+   - Mobile responsiveness
+   - Custom themes
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👥 Authors
+
+- Saikiran Paramkusham
+
+## 🙏 Acknowledgments
+
+- Google Gemini AI team
+- Streamlit community
+- All contributors and supporters 
