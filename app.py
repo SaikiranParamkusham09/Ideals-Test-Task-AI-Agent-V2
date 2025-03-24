@@ -22,19 +22,32 @@ CANDIDATE_STAGES = [
     "Rejected"
 ]
 
+def refresh_data():
+    """Refresh all data from JSON files"""
+    data_dir = Path('data')
+    postings_data = DataAgent.perceive_data(data_dir / 'postings.json')
+    candidates_data = DataAgent.perceive_data(data_dir / 'candidates.json')
+    return postings_data, candidates_data
+
 def main():
     # Apply custom CSS
     UIAgent.apply_agent_theme()
     
     st.title("Ideals Recruitment System")
     
+    # Define data directory
+    data_dir = Path('data')
+    
+    # Initialize session state for data
+    if 'postings_data' not in st.session_state or 'candidates_data' not in st.session_state:
+        st.session_state.postings_data, st.session_state.candidates_data = refresh_data()
+    
     # Create tabs
     tab1, tab2 = st.tabs(["Candidate Assessment", "Applicant Tracking"])
     
-    # Load data from JSON files
-    data_dir = Path('data')
-    postings_data = DataAgent.perceive_data(data_dir / 'postings.json')
-    candidates_data = DataAgent.perceive_data(data_dir / 'candidates.json')
+    # Load data from session state
+    postings_data = st.session_state.postings_data
+    candidates_data = st.session_state.candidates_data
     
     if not postings_data or not candidates_data:
         st.error(
@@ -116,9 +129,13 @@ def main():
                 if WorkflowAgent.transition_candidate(
                     candidate_id, new_stage
                 ):
-                    # Save updated data
+                    # Refresh data after successful update
+                    st.session_state.postings_data, st.session_state.candidates_data = refresh_data()
+                    
+                    # Save updated data using the refreshed data
                     if DataAgent.persist_state(
-                        data_dir / 'candidates.json', candidates_data
+                        data_dir / 'candidates.json', 
+                        st.session_state.candidates_data
                     ):
                         st.success(
                             f"Successfully moved {candidate_details['name']} to "
@@ -207,6 +224,11 @@ def main():
     with tab2:
         st.header("Applicant Tracking")
         
+        # Add refresh button
+        if st.button("Refresh Data"):
+            st.session_state.postings_data, st.session_state.candidates_data = refresh_data()
+            st.success("Data refreshed successfully!")
+        
         # Add filters
         col1, col2 = st.columns(2)
         with col1:
@@ -221,9 +243,9 @@ def main():
                 options=["All"] + CANDIDATE_STAGES
             )
         
-        # Create a DataFrame for tracking
+        # Create a DataFrame for tracking using refreshed data
         tracking_data = []
-        for candidate in candidates_data['candidates']:
+        for candidate in st.session_state.candidates_data['candidates']:
             tracking_data.append({
                 'Name': candidate['name'],
                 'Email': candidate['emails'][0],
@@ -268,7 +290,7 @@ def main():
         
         if selected_candidate_tracking:
             candidate_history = next(
-                (c['stage_history'] for c in candidates_data['candidates'] 
+                (c['stage_history'] for c in st.session_state.candidates_data['candidates'] 
                  if c['name'] == selected_candidate_tracking),
                 []
             )
