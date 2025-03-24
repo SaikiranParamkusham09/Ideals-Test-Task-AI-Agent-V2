@@ -1,6 +1,8 @@
 # Agentic Recruitment System
 
 A modern, AI-powered recruitment system that leverages agent-based architecture to automate and streamline the hiring process.
+![image](https://github.com/user-attachments/assets/6def15d3-1cb0-4e33-be43-732bcb048add)
+
 
 ## Features
 
