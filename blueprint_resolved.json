@@ -1,0 +1,1138 @@
+{
+    "name": "Test Task BPA TO DO (copy)",
+    "flow": [
+        {
+            "id": 1,
+            "module": "util:BasicTrigger",
+            "version": 1,
+            "parameters": {
+                "values": [
+                    {
+                        "spec": [
+                            {
+                                "name": "email",
+                                "value": "john.dou@company.com"
+                            },
+                            {
+                                "name": "full name",
+                                "value": "Dou, John"
+                            },
+                            {
+                                "name": "startdate",
+                                "value": "20.02.2024"
+                            },
+                            {
+                                "name": "enddate",
+                                "value": "11.02.2024"
+                            },
+                            {
+                                "name": "number",
+                                "value": "123894.56"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 150,
+                    "name": "Data"
+                },
+                "restore": {
+                    "parameters": {
+                        "values": {
+                            "items": [
+                                {
+                                    "spec": {
+                                        "mode": "chose",
+                                        "items": [
+                                            null,
+                                            null,
+                                            null,
+                                            null,
+                                            null
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "values",
+                        "type": "array",
+                        "label": "Bundles",
+                        "required": true,
+                        "spec": [
+                            {
+                                "name": "spec",
+                                "label": "Items",
+                                "type": "array",
+                                "required": true,
+                                "spec": [
+                                    {
+                                        "name": "name",
+                                        "label": "Name",
+                                        "required": true,
+                                        "type": "text"
+                                    },
+                                    {
+                                        "name": "value",
+                                        "label": "Value",
+                                        "required": true,
+                                        "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "email",
+                        "label": "email",
+                        "type": "text"
+                    },
+                    {
+                        "name": "full name",
+                        "label": "full name",
+                        "type": "text"
+                    },
+                    {
+                        "name": "startdate",
+                        "label": "startdate",
+                        "type": "text"
+                    },
+                    {
+                        "name": "enddate",
+                        "label": "enddate",
+                        "type": "text"
+                    },
+                    {
+                        "name": "number",
+                        "label": "number",
+                        "type": "text"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "module": "builtin:BasicRouter",
+            "version": 1,
+            "mapper": null,
+            "metadata": {
+                "designer": {
+                    "x": 372,
+                    "y": 134
+                }
+            },
+            "routes": [
+                {
+                    "flow": [
+                        {
+                            "id": 2,
+                            "module": "util:SetVariables",
+                            "version": 1,
+                            "parameters": {},
+                            "filter": {
+                                "name": "",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{1.`full name`}}",
+                                            "o": "text:equal",
+                                            "b": "Dou, John"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "variables": [
+                                    {
+                                        "name": "Determine the day of the week for {{1.startdate}}",
+                                        "value": "{{formatDate(parseDate(1.startdate; \"YYYY-MM-DD\"); \"dddd\")}}"
+                                    },
+                                    {
+                                        "name": "Check If {{1.email}} has \"@\" and \".com\" symbols",
+                                        "value": "{{if(contains(1.email; \"@\") + \" = \" + (true & contains(1.email; \".com\")) + \"=\" + true; \" Valid email contains @ & .com\"; \"Invalid email\")}}"
+                                    },
+                                    {
+                                        "name": "Add 3 business days to {{1.startdate}} and format it as “Feb 23rd, 12 PM”",
+                                        "value": "{{formatDate(addDays(1.startdate; 3); \"MMM Do, hh A\")}}"
+                                    },
+                                    {
+                                        "name": "Extract the first word (name) from the {{1.email}} and capitalize it (e.g., john.dou@company.com → John)",
+                                        "value": "{{capitalize(substring(1.email; 0; indexOf(1.email; \".\")))}}"
+                                    },
+                                    {
+                                        "name": "Calculate the difference in days between two dates {{1.startdate}} and {{1.enddate}}",
+                                        "value": "{{(formatDate(1.startdate; \"X\") - formatDate(1.enddate; \"X\")) / 60 / 60 / 24}}"
+                                    },
+                                    {
+                                        "name": "Swap the words in the text {{1.`full name`}} to “John Dou”",
+                                        "value": "{{replace(1.`full name`; 1.`full name`; \"John Dou\")}}"
+                                    },
+                                    {
+                                        "name": "Generate a random 12-character password",
+                                        "value": "{{substring(md5(uuid); 0; 12)}}"
+                                    },
+                                    {
+                                        "name": "Remove decimal digits (e.g., 1234.56 → 1,234) and add a thousands separator (e.g., 1000000 → 1,000,000)",
+                                        "value": "{{formatNumber(1234.56; 0; \",\"; \".\")}}"
+                                    }
+                                ],
+                                "scope": "roundtrip"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 600,
+                                    "y": -150,
+                                    "name": "Results"
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "variables": {
+                                            "items": [
+                                                null,
+                                                null,
+                                                null,
+                                                null,
+                                                null,
+                                                null,
+                                                null,
+                                                null
+                                            ]
+                                        },
+                                        "scope": {
+                                            "label": "One cycle"
+                                        }
+                                    }
+                                },
+                                "expect": [
+                                    {
+                                        "name": "variables",
+                                        "type": "array",
+                                        "label": "Variables",
+                                        "spec": [
+                                            {
+                                                "name": "name",
+                                                "label": "Variable name",
+                                                "type": "text",
+                                                "required": true
+                                            },
+                                            {
+                                                "name": "value",
+                                                "label": "Variable value",
+                                                "type": "any"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "scope",
+                                        "type": "select",
+                                        "label": "Variable lifetime",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "roundtrip",
+                                                "execution"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "interface": [
+                                    {
+                                        "name": "Determine the day of the week for 20.02.2024",
+                                        "label": "Determine the day of the week for 20.02.2024",
+                                        "type": "any"
+                                    },
+                                    {
+                                        "name": "Check If john.dou@company.com has \"@\" and \".com\" symbols",
+                                        "label": "Check If john.dou@company.com has \"@\" and \".com\" symbols",
+                                        "type": "any"
+                                    },
+                                    {
+                                        "name": "Add 3 business days to 20.02.2024 and format it as “Feb 23rd, 12 PM”",
+                                        "label": "Add 3 business days to 20.02.2024 and format it as “Feb 23rd, 12 PM”",
+                                        "type": "any"
+                                    },
+                                    {
+                                        "name": "Extract the first word (name) from the john.dou@company.com and capitalize it (e.g., john.dou@company.com → John)",
+                                        "label": "Extract the first word (name) from the john.dou@company.com and capitalize it (e.g., john.dou@company.com → John)",
+                                        "type": "any"
+                                    },
+                                    {
+                                        "name": "Calculate the difference in days between two dates 20.02.2024 and 11.02.2024",
+                                        "label": "Calculate the difference in days between two dates 20.02.2024 and 11.02.2024",
+                                        "type": "any"
+                                    },
+                                    {
+                                        "name": "Swap the words in the text Dou, John to “John Dou”",
+                                        "label": "Swap the words in the text Dou, John to “John Dou”",
+                                        "type": "any"
+                                    },
+                                    {
+                                        "name": "Generate a random 12-character password",
+                                        "label": "Generate a random 12-character password",
+                                        "type": "any"
+                                    },
+                                    {
+                                        "name": "Remove decimal digits (e.g., 1234.56 → 1,234) and add a thousands separator (e.g., 1000000 → 1,000,000)",
+                                        "label": "Remove decimal digits (e.g., 1234.56 → 1,234) and add a thousands separator (e.g., 1000000 → 1,000,000)",
+                                        "type": "any"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 13,
+                            "module": "json:ParseJSON",
+                            "version": 1,
+                            "parameters": {
+                                "type": 68007
+                            },
+                            "filter": {
+                                "name": "Email",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{1.email}}",
+                                            "o": "text:equal",
+                                            "b": "john.dou@company.com"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "json": "[\n    {\n        \"id\": \"0679280b\",\n        \"type\": \"invoice\",\n        \"misc_amount\": 0.00,\n        \"vendor\": {\n            \"id\": \"6e699cae\",\n            \"type\": \"vendor\",\n            \"name\": \"Google Technology Co., Ltd\",\n            \"external_data\": [\n                {\n                    \"id\": \"4583\",\n                    \"number\": \"78558UUY478\",\n                    \"source\": \"net\"\n                }\n            ]\n        },\n        \"posting_period\": {\n            \"id\": \"727a989f\",\n            \"type\": \"posting_period\",\n            \"name\": \"Jan 2025\"\n        },\n        \"line_items\": [\n            {\n                \"id\": \"0679280\",\n                \"type\": \"line_item\",\n                \"total\": 30000.00,\n                \"matched_purchase_order_line_item\": {\n                    \"id\": \"067894fb\",\n                    \"type\": \"line_item\",\n                    \"total\": 30000.00,\n                    \"line_number\": 1\n                },\n                \"item_account\": {\n                    \"id\": \"a9bc6757\",\n                    \"type\": \"item_account\",\n                    \"name\": \"Venue\",\n                    \"active\": true,\n                    \"item_unit_of_measure\": null,\n                    \"external_id\": \"1727\"\n                },\n                \"gl_code\": null,\n                \"department\": {\n                    \"id\": \"54ce8682\",\n                    \"type\": \"department\",\n                    \"name\": \"Sales & Marketing\"\n                },\n                \"location\": null,\n                \"amortization_schedule\": {\n                    \"start_date\": null,\n                    \"end_date\": null,\n                    \"name\": null\n                },\n                \"attributes\": [\n                    {\n                        \"id\": \"0679281f\",\n                        \"config_id\": \"390a8077\",\n                        \"name\": \"LoB\",\n                        \"data\": \"Group 1\"\n                    }\n                ]\n            }\n        ],\n        \"subsidiary\": {\n            \"id\": \"4bbe0d39\",\n            \"type\": \"subsidiary\",\n            \"name\": \"Business Technology Solutions\"\n        },\n        \"department\": {\n            \"id\": \"54ce8682\",\n            \"type\": \"department\",\n            \"name\": \"Sales & Marketing\"\n        },\n        \"location\": null,\n        \"payment_terms\": null,\n        \"purchase_orders\": [\n            {\n                \"id\": \"067894fb\",\n                \"type\": \"purchase_order\",\n                \"po_number\": \"311\",\n                \"external_id\": \"579\"\n            }\n        ],\n        \"status\": \"PENDING_APPROVAL\",\n        \"external_id\": null,\n        \"payouts\": [],\n        \"updated_at\": 1737654900,\n        \"applied_vendor_credits\": [],\n        \"payment_method\": null,\n        \"attributes\": [\n            {\n                \"id\": \"0679281e\",\n                \"config_id\": \"066a3b03\",\n                \"name\": \"Marketing ID\",\n                \"data\": \"CN41EVT462025604253\"\n            },\n            {\n                \"id\": \"0679281ee\",\n                \"config_id\": \"7ab44f92\",\n                \"name\": \"LoB\",\n                \"data\": \"Group 1\"\n            },\n            {\n                \"id\": \"0679281e\",\n                \"config_id\": \"42b4ce65\",\n                \"name\": \"Invoice Payment Terms\",\n                \"data\": \"Net 10\"\n            }\n        ]\n    }\n]"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 737,
+                                    "y": 159,
+                                    "name": "JSON Data"
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "type": {
+                                            "label": "Data Structure 1"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "type",
+                                        "type": "udt",
+                                        "label": "Data structure"
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "json",
+                                        "type": "text",
+                                        "label": "JSON string",
+                                        "required": true
+                                    }
+                                ],
+                                "interface": [
+                                    {
+                                        "name": "id",
+                                        "label": "ID",
+                                        "help": "",
+                                        "type": "text",
+                                        "default": null,
+                                        "required": false,
+                                        "multiline": false
+                                    },
+                                    {
+                                        "name": "type",
+                                        "label": "Type",
+                                        "help": "",
+                                        "type": "text",
+                                        "default": null,
+                                        "required": false,
+                                        "multiline": false
+                                    },
+                                    {
+                                        "name": "misc_amount",
+                                        "label": "Misc Amount",
+                                        "help": "",
+                                        "type": "number",
+                                        "default": null,
+                                        "required": false
+                                    },
+                                    {
+                                        "name": "vendor",
+                                        "label": "Vendor",
+                                        "help": "",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "id",
+                                                "label": null,
+                                                "help": "",
+                                                "type": "text",
+                                                "default": null,
+                                                "required": false,
+                                                "multiline": false
+                                            },
+                                            {
+                                                "name": "type",
+                                                "label": null,
+                                                "help": "",
+                                                "type": "text",
+                                                "default": null,
+                                                "required": false,
+                                                "multiline": false
+                                            },
+                                            {
+                                                "name": "name",
+                                                "label": null,
+                                                "help": "",
+                                                "type": "text",
+                                                "default": null,
+                                                "required": false,
+                                                "multiline": false
+                                            },
+                                            {
+                                                "name": "external_data",
+                                                "label": null,
+                                                "help": "",
+                                                "type": "array",
+                                                "spec": {
+                                                    "type": "collection",
+                                                    "spec": [
+                                                        {
+                                                            "name": "id",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "number",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "source",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        }
+                                                    ],
+                                                    "required": false
+                                                },
+                                                "required": false
+                                            }
+                                        ],
+                                        "required": false
+                                    },
+                                    {
+                                        "name": "posting_period",
+                                        "label": "Posting Period",
+                                        "help": "",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "id",
+                                                "label": null,
+                                                "help": "",
+                                                "type": "text",
+                                                "default": null,
+                                                "required": false,
+                                                "multiline": false
+                                            },
+                                            {
+                                                "name": "type",
+                                                "label": null,
+                                                "help": "",
+                                                "type": "text",
+                                                "default": null,
+                                                "required": false,
+                                                "multiline": false
+                                            },
+                                            {
+                                                "name": "name",
+                                                "label": null,
+                                                "help": "",
+                                                "type": "text",
+                                                "default": null,
+                                                "required": false,
+                                                "multiline": false
+                                            }
+                                        ],
+                                        "required": false
+                                    },
+                                    {
+                                        "name": "line_items",
+                                        "label": "Line Items",
+                                        "help": "",
+                                        "type": "array",
+                                        "spec": {
+                                            "type": "collection",
+                                            "spec": [
+                                                {
+                                                    "name": "id",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "text",
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                },
+                                                {
+                                                    "name": "type",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "text",
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                },
+                                                {
+                                                    "name": "total",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "number",
+                                                    "default": null,
+                                                    "required": false
+                                                },
+                                                {
+                                                    "name": "matched_purchase_order_line_item",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "collection",
+                                                    "spec": [
+                                                        {
+                                                            "name": "id",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "type",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "total",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "number",
+                                                            "default": null,
+                                                            "required": false
+                                                        },
+                                                        {
+                                                            "name": "line_number",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "number",
+                                                            "default": null,
+                                                            "required": false
+                                                        }
+                                                    ],
+                                                    "required": false
+                                                },
+                                                {
+                                                    "name": "item_account",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "collection",
+                                                    "spec": [
+                                                        {
+                                                            "name": "id",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "type",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "name",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "active",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "boolean",
+                                                            "required": false
+                                                        },
+                                                        {
+                                                            "name": "item_unit_of_measure",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "external_id",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        }
+                                                    ],
+                                                    "required": false
+                                                },
+                                                {
+                                                    "name": "gl_code",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "text",
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                },
+                                                {
+                                                    "name": "department",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "collection",
+                                                    "spec": [
+                                                        {
+                                                            "name": "id",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "type",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "name",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        }
+                                                    ],
+                                                    "required": false
+                                                },
+                                                {
+                                                    "name": "location",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "text",
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                },
+                                                {
+                                                    "name": "amortization_schedule",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "collection",
+                                                    "spec": [
+                                                        {
+                                                            "name": "start_date",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "end_date",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "name",
+                                                            "label": null,
+                                                            "help": "",
+                                                            "type": "text",
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        }
+                                                    ],
+                                                    "required": false
+                                                },
+                                                {
+                                                    "name": "attributes",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "array",
+                                                    "spec": {
+                                                        "type": "collection",
+                                                        "spec": [
+                                                            {
+                                                                "name": "id",
+                                                                "label": null,
+                                                                "help": "",
+                                                                "type": "text",
+                                                                "default": null,
+                                                                "required": false,
+                                                                "multiline": false
+                                                            },
+                                                            {
+                                                                "name": "config_id",
+                                                                "label": null,
+                                                                "help": "",
+                                                                "type": "text",
+                                                                "default": null,
+                                                                "required": false,
+                                                                "multiline": false
+                                                            },
+                                                            {
+                                                                "name": "name",
+                                                                "label": null,
+                                                                "help": "",
+                                                                "type": "text",
+                                                                "default": null,
+                                                                "required": false,
+                                                                "multiline": false
+                                                            },
+                                                            {
+                                                                "name": "data",
+                                                                "label": null,
+                                                                "help": "",
+                                                                "type": "text",
+                                                                "default": null,
+                                                                "required": false,
+                                                                "multiline": false
+                                                            }
+                                                        ],
+                                                        "required": false
+                                                    },
+                                                    "required": false
+                                                }
+                                            ],
+                                            "required": false
+                                        },
+                                        "required": false
+                                    },
+                                    {
+                                        "name": "subsidiary",
+                                        "label": "Subsidiary",
+                                        "help": "",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "id",
+                                                "label": null,
+                                                "help": "",
+                                                "type": "text",
+                                                "default": null,
+                                                "required": false,
+                                                "multiline": false
+                                            },
+                                            {
+                                                "name": "type",
+                                                "label": null,
+                                                "help": "",
+                                                "type": "text",
+                                                "default": null,
+                                                "required": false,
+                                                "multiline": false
+                                            },
+                                            {
+                                                "name": "name",
+                                                "label": null,
+                                                "help": "",
+                                                "type": "text",
+                                                "default": null,
+                                                "required": false,
+                                                "multiline": false
+                                            }
+                                        ],
+                                        "required": false
+                                    },
+                                    {
+                                        "name": "department",
+                                        "label": "Department",
+                                        "help": "",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "id",
+                                                "label": null,
+                                                "help": "",
+                                                "type": "text",
+                                                "default": null,
+                                                "required": false,
+                                                "multiline": false
+                                            },
+                                            {
+                                                "name": "type",
+                                                "label": null,
+                                                "help": "",
+                                                "type": "text",
+                                                "default": null,
+                                                "required": false,
+                                                "multiline": false
+                                            },
+                                            {
+                                                "name": "name",
+                                                "label": null,
+                                                "help": "",
+                                                "type": "text",
+                                                "default": null,
+                                                "required": false,
+                                                "multiline": false
+                                            }
+                                        ],
+                                        "required": false
+                                    },
+                                    {
+                                        "name": "location",
+                                        "label": "Location",
+                                        "help": "",
+                                        "type": "text",
+                                        "default": null,
+                                        "required": false,
+                                        "multiline": false
+                                    },
+                                    {
+                                        "name": "payment_terms",
+                                        "label": "Payment Terms",
+                                        "help": "",
+                                        "type": "text",
+                                        "default": null,
+                                        "required": false,
+                                        "multiline": false
+                                    },
+                                    {
+                                        "name": "purchase_orders",
+                                        "label": "Purchase Orders",
+                                        "help": "",
+                                        "type": "array",
+                                        "spec": {
+                                            "type": "collection",
+                                            "spec": [
+                                                {
+                                                    "name": "id",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "text",
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                },
+                                                {
+                                                    "name": "type",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "text",
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                },
+                                                {
+                                                    "name": "po_number",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "text",
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                },
+                                                {
+                                                    "name": "external_id",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "text",
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                }
+                                            ],
+                                            "required": false
+                                        },
+                                        "required": false
+                                    },
+                                    {
+                                        "name": "status",
+                                        "label": "Status",
+                                        "help": "",
+                                        "type": "text",
+                                        "default": null,
+                                        "required": false,
+                                        "multiline": false
+                                    },
+                                    {
+                                        "name": "external_id",
+                                        "label": "External ID",
+                                        "help": "",
+                                        "type": "text",
+                                        "default": null,
+                                        "required": false,
+                                        "multiline": false
+                                    },
+                                    {
+                                        "name": "payouts",
+                                        "label": "Payouts",
+                                        "help": "",
+                                        "type": "array",
+                                        "spec": {
+                                            "type": "text",
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        "required": false
+                                    },
+                                    {
+                                        "name": "updated_at",
+                                        "label": "Updated At",
+                                        "help": "",
+                                        "type": "number",
+                                        "default": null,
+                                        "required": false
+                                    },
+                                    {
+                                        "name": "applied_vendor_credits",
+                                        "label": "Applied Vendor Credits",
+                                        "help": "",
+                                        "type": "array",
+                                        "spec": {
+                                            "type": "text",
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        "required": false
+                                    },
+                                    {
+                                        "name": "payment_method",
+                                        "label": "Payment Method",
+                                        "help": "",
+                                        "type": "text",
+                                        "default": null,
+                                        "required": false,
+                                        "multiline": false
+                                    },
+                                    {
+                                        "name": "attributes",
+                                        "label": "Attributes",
+                                        "help": "",
+                                        "type": "array",
+                                        "spec": {
+                                            "type": "collection",
+                                            "spec": [
+                                                {
+                                                    "name": "id",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "text",
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                },
+                                                {
+                                                    "name": "config_id",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "text",
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                },
+                                                {
+                                                    "name": "name",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "text",
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                },
+                                                {
+                                                    "name": "data",
+                                                    "label": null,
+                                                    "help": "",
+                                                    "type": "text",
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                }
+                                            ],
+                                            "required": false
+                                        },
+                                        "required": false
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 14,
+                            "module": "util:SetVariables",
+                            "version": 1,
+                            "parameters": {},
+                            "mapper": {
+                                "variables": [
+                                    {
+                                        "name": "Get the value \"data\" of \"Marketing ID\" field in Attributes array",
+                                        "value": "{{13.attributes[1].data}}"
+                                    },
+                                    {
+                                        "name": "Get the value \"number\" from \"external_data[]\" in external data",
+                                        "value": "{{13.vendor.external_data[].number}}"
+                                    }
+                                ],
+                                "scope": "roundtrip"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1184,
+                                    "y": 160,
+                                    "name": "Get data from fields"
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "variables": {
+                                            "items": [
+                                                null,
+                                                null
+                                            ]
+                                        },
+                                        "scope": {
+                                            "label": "One cycle"
+                                        }
+                                    }
+                                },
+                                "expect": [
+                                    {
+                                        "name": "variables",
+                                        "type": "array",
+                                        "label": "Variables",
+                                        "spec": [
+                                            {
+                                                "name": "name",
+                                                "label": "Variable name",
+                                                "type": "text",
+                                                "required": true
+                                            },
+                                            {
+                                                "name": "value",
+                                                "label": "Variable value",
+                                                "type": "any"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "scope",
+                                        "type": "select",
+                                        "label": "Variable lifetime",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "roundtrip",
+                                                "execution"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "interface": [
+                                    {
+                                        "name": "Get the value \"data\" of \"Marketing ID\" field in Attributes array",
+                                        "label": "Get the value \"data\" of \"Marketing ID\" field in Attributes array",
+                                        "type": "any"
+                                    },
+                                    {
+                                        "name": "Get the value \"number\" from \"external_data[]\" in external data",
+                                        "label": "Get the value \"number\" from \"external_data[]\" in external data",
+                                        "type": "any"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "us2.make.com",
+        "notes": [
+            {
+                "moduleIds": [
+                    1
+                ],
+                "content": "<p>Changed the fields &quot;date&quot; to &quot;startdate&quot; and the Label &quot;Full Name&quot; to &quot;full name&quot;</p>",
+                "isFilterNote": false,
+                "metadata": {
+                    "color": "#9138FE"
+                }
+            }
+        ]
+    }
+}
