@@ -142,5 +142,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Streamlit community
 - All contributors and supporters 
 
-![image](https://github.com/user-attachments/assets/3b1bb12e-4c08-416e-a77d-f14d13165ca5)
-
