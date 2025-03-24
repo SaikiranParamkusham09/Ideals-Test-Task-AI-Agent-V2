@@ -1,0 +1,23 @@
+Below is a summary outlining the key changes made in the resolved blueprint compared to the original:
+
+Field Naming & Data Consistency:
+
+Changed the trigger’s field names to ensure consistency. For example, the original keys "Full Name", "Date", and "End Date" have been renamed to "full name", "startdate", and "enddate" respectively. This avoids mapping issues later in the workflow.
+
+Calculation Module Enhancements (Module 2 – SetVariables):
+
+Replaced all placeholder text with actual function expressions. For example, instead of a placeholder for determining the day of the week, the expression now uses functions like formatDate and parseDate.
+
+Added a filter condition in Module 2 to check that the full name is equal to "Dou, John", ensuring the calculations only run for the expected input.
+
+Improved Expression Logic:
+
+Updated expressions to include operations such as extracting the first word from an email (using substring and indexOf), generating a 12-character password (using MD5 and UUID), and formatting numbers with thousand separators. These enhancements demonstrate practical use of Make.com functions rather than leaving tasks unimplemented.
+
+JSON Parsing Module (Module 13):
+
+The parameter "type" has been changed from an empty string to a numeric value (68007), which may indicate a defined data structure or schema ID. This ensures that downstream modules interpret the parsed JSON correctly.
+
+Data Extraction Module (Module 14 – SetVariables):
+
+Modified the variable mappings to include explicit expressions. For instance, the expression to extract the “Marketing ID” now references {{13.attributes[1].data}} (instead of a placeholder), and the extraction for the external data number is updated to reference the correct path.
