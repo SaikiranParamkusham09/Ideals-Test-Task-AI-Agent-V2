@@ -1,0 +1,1366 @@
+{
+  "candidates": [
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "name": "John Doe",
+      "contact": "c3d1e5f6-78a9-4b2c-9876-123456abcdef",
+      "headline": "TechCorp",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Berlin, DE",
+      "phones": [
+        {
+          "type": "other",
+          "value": "+4915123456789"
+        }
+      ],
+      "emails": [
+        "johndoe@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/johndoe123/"
+      ],
+      "archived": null,
+      "tags": [
+        "Software Engineer",
+        "Tech",
+        "Developer",
+        "Remote",
+        "Full-Time"
+      ],
+      "sources": [
+        "Recruiter"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 3,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "referred",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/f47ac10b-58cc-4372-a567-0e02b2c3d479"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "Remote",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/John_Doe.pdf",
+      "stage_history": [
+        {
+          "stage": "Rejected",
+          "timestamp": "2025-03-23T20:19:16.506233",
+          "comments": "rejected as the it is not right fitment"
+        },
+        {
+          "stage": "Initial Screening",
+          "timestamp": "2025-03-23T20:29:55.475447",
+          "comments": "screening passed"
+        },
+        {
+          "stage": "Technical Assessment",
+          "timestamp": "2025-03-23T20:32:54.790807",
+          "comments": "Moved to Technical assessment"
+        },
+        {
+          "stage": "Interview",
+          "timestamp": "2025-03-23T20:35:43.882837",
+          "comments": "Moved to Technical assessment"
+        },
+        {
+          "stage": "Interview",
+          "timestamp": "2025-03-23T22:03:23.535050",
+          "comments": "Selected for Interview"
+        }
+      ],
+      "current_stage": "Interview"
+    },
+    {
+      "id": "e29ac10b-12cd-47a3-b567-1a02c2d4e589",
+      "name": "Emma Johnson",
+      "contact": "b4d1e5f6-99b8-4c2d-8765-abcdef123456",
+      "headline": "FinCorp",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "New York, US",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+16465551234"
+        }
+      ],
+      "emails": [
+        "emma.johnson@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/emma-johnson-billing/"
+      ],
+      "archived": null,
+      "tags": [
+        "Billing Specialist",
+        "Finance",
+        "Payment Processing",
+        "Accounting",
+        "Full-Time"
+      ],
+      "sources": [
+        "Job portal"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 2,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/e29ac10b-12cd-47a3-b567-1a02c2d4e589"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "New York",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Emma_Johnson.pdf"
+    },
+    {
+      "id": "d91bc20c-34de-48f5-a678-2b13c3e5f690",
+      "name": "Michael Carter",
+      "contact": "e5f2d1c7-89a6-4b2d-5678-fedcba987654",
+      "headline": "SalesForceX",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Austin, US",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+15125551234"
+        }
+      ],
+      "emails": [
+        "michael.carter@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/michael-carter-sales/"
+      ],
+      "archived": null,
+      "tags": [
+        "Senior Sales Development Representative",
+        "Sales",
+        "B2B Sales",
+        "Lead Generation",
+        "Full-Time"
+      ],
+      "sources": [
+        "Referral"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 3,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "referred",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/d91bc20c-34de-48f5-a678-2b13c3e5f690"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "Austin",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Michael_Carter.pdf",
+      "current_stage": "Interview",
+      "stage_history": [
+        {
+          "stage": "Interview",
+          "timestamp": "2025-03-24 09:41:41",
+          "comments": "Selected for interview"
+        }
+      ]
+    },
+    {
+      "id": "a7c3f20d-89de-41f3-b123-4c56d7e8f901",
+      "name": "Sophia Bennett",
+      "contact": "d3e7f6b5-98c2-4a1d-8765-abcdef123456",
+      "headline": "GrowthTech",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "San Francisco, US",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+14155551234"
+        }
+      ],
+      "emails": [
+        "sophia.bennett@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/sophia-bennett-sales/"
+      ],
+      "archived": null,
+      "tags": [
+        "Senior Sales Development Representative",
+        "SaaS Sales",
+        "Lead Generation",
+        "Outbound Sales",
+        "Full-Time"
+      ],
+      "sources": [
+        "LinkedIn"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 4,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/a7c3f20d-89de-41f3-b123-4c56d7e8f901"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "San Francisco",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Sophia_Bennett.pdf"
+    },
+    {
+      "id": "b8f4e21d-56cd-42f8-a987-3e78d9e6f202",
+      "name": "Daniel Thompson",
+      "contact": "f5e2c8d9-78b3-4a1c-7654-fedcba987321",
+      "headline": "DataTech Solutions",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Chicago, US",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+13125551234"
+        }
+      ],
+      "emails": [
+        "daniel.thompson@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/daniel-thompson-bi/"
+      ],
+      "archived": null,
+      "tags": [
+        "BI Analyst",
+        "Data Analytics",
+        "Business Intelligence",
+        "SQL",
+        "Full-Time"
+      ],
+      "sources": [
+        "Company Website"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 4,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/b8f4e21d-56cd-42f8-a987-3e78d9e6f202"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "Chicago",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Daniel_Thompson.pdf"
+    },
+    {
+      "id": "c9e5f21d-34af-48d7-b654-6a89d7e8f303",
+      "name": "Alexander Reynolds",
+      "contact": "f6e3c9d8-78b4-4a2c-8765-fedcba123456",
+      "headline": "InsightData Solutions",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "New York, US",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+16465551234"
+        }
+      ],
+      "emails": [
+        "alexander.reynolds@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/alexander-reynolds-bi/"
+      ],
+      "archived": null,
+      "tags": [
+        "BI Analyst",
+        "Data Analytics",
+        "SQL",
+        "Power BI",
+        "Python",
+        "Full-Time"
+      ],
+      "sources": [
+        "LinkedIn"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 4,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/c9e5f21d-34af-48d7-b654-6a89d7e8f303"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "New York",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Alexander_Reynolds.pdf"
+    },
+    {
+      "id": "f6d4b21e-45df-42c6-a987-5b98e7d9f404",
+      "name": "Olivia Matthews",
+      "contact": "a3f8d7c6-78b5-4a2d-9876-fedcba654321",
+      "headline": "ClientFirst Solutions",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Los Angeles, US",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+12135551234"
+        }
+      ],
+      "emails": [
+        "olivia.matthews@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/olivia-matthews-csm/"
+      ],
+      "archived": null,
+      "tags": [
+        "Customer Success Manager",
+        "Account Management",
+        "SaaS",
+        "Customer Experience",
+        "Full-Time"
+      ],
+      "sources": [
+        "Referral"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 4,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "referred",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/f6d4b21e-45df-42c6-a987-5b98e7d9f404"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "Los Angeles",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Olivia_Matthews.pdf"
+    },
+    {
+      "id": "g7h5k32f-67de-45a1-b543-7c89f8e9g505",
+      "name": "Ethan Williams",
+      "contact": "c4e9d8f7-89b6-4a2d-9876-fedcba321654",
+      "headline": "ClientCare Solutions",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Boston, US",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+16175551234"
+        }
+      ],
+      "emails": [
+        "ethan.williams@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/ethan-williams-csm/"
+      ],
+      "archived": null,
+      "tags": [
+        "Customer Success Manager",
+        "B2B SaaS",
+        "Client Engagement",
+        "Customer Retention",
+        "Full-Time"
+      ],
+      "sources": [
+        "Job Portal"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 5,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/g7h5k32f-67de-45a1-b543-7c89f8e9g505"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "Boston",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Ethan_Williams.docx"
+    },
+    {
+      "id": "h8i6j43g-78ef-46b2-c654-8d90f9g0h606",
+      "name": "James Harrison",
+      "contact": "d5f0e9g8-78c7-4b3d-9876-fedcba876543",
+      "headline": "TechSales UK Ltd.",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "London, UK",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+442071231234"
+        }
+      ],
+      "emails": [
+        "james.harrison@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/james-harrison-sales/"
+      ],
+      "archived": null,
+      "tags": [
+        "Inside Sales Account Executive",
+        "B2B Sales",
+        "Lead Generation",
+        "Full-Time"
+      ],
+      "sources": [
+        "LinkedIn"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 3,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/h8i6j43g-78ef-46b2-c654-8d90f9g0h606"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "London",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/James_Harrison.pdf"
+    },
+    {
+      "id": "j9k7l54h-89fg-57c3-d765-9e01g0h1i707",
+      "name": "Daniel Foster",
+      "contact": "e6g1f0h9-89d8-4c3e-9876-fedcba654987",
+      "headline": "B2BSales Experts Ltd.",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Manchester, UK",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+441612345678"
+        }
+      ],
+      "emails": [
+        "daniel.foster@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/daniel-foster-sales/"
+      ],
+      "archived": null,
+      "tags": [
+        "Inside Sales Account Executive",
+        "B2B Sales",
+        "Outbound Sales",
+        "Enterprise Sales",
+        "Full-Time"
+      ],
+      "sources": [
+        "Referral"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 4,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "referred",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/j9k7l54h-89fg-57c3-d765-9e01g0h1i707"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "Manchester",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Daniel_Foster.docx"
+    },
+    {
+      "id": "p9q8r65s-12cd-45f8-e876-1z23x4y5w809",
+      "name": "Amelia Richardson",
+      "contact": "f8g2h3j4-89c7-4b5d-9876-fedcba765432",
+      "headline": "Creative UX Studio",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "London, UK",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+442071231987"
+        }
+      ],
+      "emails": [
+        "amelia.richardson@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/amelia-richardson-content/"
+      ],
+      "archived": null,
+      "tags": [
+        "Senior Content Designer",
+        "UX Writing",
+        "Content Strategy",
+        "Information Architecture",
+        "Full-Time"
+      ],
+      "sources": [
+        "Personal Referral"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 5,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/p9q8r65s-12cd-45f8-e876-1z23x4y5w809"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "London",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Amelia_Richardson.pdf"
+    },
+    {
+      "id": "s1a2b3c4-89df-45g7-h987-2x34y5z6w010",
+      "name": "Jonathan Mitchell",
+      "contact": "f9g8h7j6-78c5-4d3e-9876-fedcba543210",
+      "headline": "NextGen Software Solutions",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Berlin, Germany",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+4915123456789"
+        }
+      ],
+      "emails": [
+        "jonathan.mitchell@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/jonathan-mitchell-architect/"
+      ],
+      "archived": null,
+      "tags": [
+        "Software Architect",
+        "Microservices",
+        "Cloud Architecture",
+        "Scalability",
+        "Full-Time"
+      ],
+      "sources": [
+        "Personal Referral"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 6,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/s1a2b3c4-89df-45g7-h987-2x34y5z6w010"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "Berlin",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Jonathan_Mitchell.pdf"
+    },
+    {
+      "id": "b5c6d7e8-12fg-45h9-j876-3k45m6n7o809",
+      "name": "Luca Moretti",
+      "contact": "g8h9j0k1-78c5-4d3e-9876-fedcba432109",
+      "headline": "Sales Growth Italy",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Milan, Italy",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+393471234567"
+        }
+      ],
+      "emails": [
+        "luca.moretti@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/luca-moretti-bdm/"
+      ],
+      "archived": null,
+      "tags": [
+        "Business Development Manager",
+        "B2B Sales",
+        "Partnerships",
+        "Milan",
+        "Full-Time"
+      ],
+      "sources": [
+        "Job Portal"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 3,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/b5c6d7e8-12fg-45h9-j876-3k45m6n7o809"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "Milan",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Luca_Moretti.pdf"
+    },
+    {
+      "id": "m3n4o5p6-23df-49h8-k765-9y78z6w5x201",
+      "name": "Marco Rossi",
+      "contact": "h9j0k1l2-89c6-4d3e-9876-fedcba210987",
+      "headline": "Global Trade Solutions",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Milan, Italy",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+393491234567"
+        }
+      ],
+      "emails": [
+        "marco.rossi@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/marco-rossi-bdm/"
+      ],
+      "archived": null,
+      "tags": [
+        "Business Development Manager",
+        "B2B Sales",
+        "International Trade",
+        "Partnerships",
+        "Full-Time"
+      ],
+      "sources": [
+        "LinkedIn"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 3,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/m3n4o5p6-23df-49h8-k765-9y78z6w5x201"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "Milan",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Marco_Rossi.pdf"
+    },
+    {
+      "id": "x5y6z7a8-34df-56h9-k987-2l45m6n7o809",
+      "name": "Alexander Carter",
+      "contact": "g9h0j1k2-78c5-4d3e-9876-fedcba543210",
+      "headline": "Elite Sales Academy",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "New York, US",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+16465551234"
+        }
+      ],
+      "emails": [
+        "alexander.carter@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/alexander-carter-sales-trainer/"
+      ],
+      "archived": null,
+      "tags": [
+        "Sales Trainer",
+        "Corporate Training",
+        "Sales Coaching",
+        "Harvard Business School",
+        "Full-Time"
+      ],
+      "sources": [
+        "Executive Referral"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 7,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "headhunted",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/x5y6z7a8-34df-56h9-k987-2l45m6n7o809"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "New York",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Alexander_Carter.pdf"
+    },
+    {
+      "id": "s9t8u7v6-45df-67h9-l987-2m45n6o7p809",
+      "name": "Samantha Blake",
+      "contact": "h9j0k1l2-78c5-4d3e-9876-fedcba210987",
+      "headline": "Content & Customer Engagement Specialist",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Toronto, Canada",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+14165551234"
+        }
+      ],
+      "emails": [
+        "samantha.blake@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/samantha-blake-seo-content/"
+      ],
+      "archived": null,
+      "tags": [
+        "SEO Content Writer",
+        "Customer Support",
+        "Technical Writing",
+        "User Experience",
+        "Full-Time"
+      ],
+      "sources": [
+        "Company Website"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 3,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/s9t8u7v6-45df-67h9-l987-2m45n6o7p809"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "Toronto",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Samantha_Blake.pdf"
+    },
+    {
+      "id": "b9i8a7l6-12df-45h9-j876-2m34n5o6p809",
+      "name": "Andrii Kovalenko",
+      "contact": "h9j0k1l2-78c5-4d3e-9876-fedcba543210",
+      "headline": "Business Intelligence Analyst",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Kyiv, Ukraine",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+380671234567"
+        }
+      ],
+      "emails": [
+        "andrii.kovalenko@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/andrii-kovalenko-bi/"
+      ],
+      "archived": null,
+      "tags": [
+        "BI Analyst",
+        "Revenue Operations",
+        "Data Analysis",
+        "Tableau",
+        "BigQuery",
+        "Full-Time"
+      ],
+      "sources": [
+        "LinkedIn"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 4,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/b9i8a7l6-12df-45h9-j876-2m34n5o6p809"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "Ukraine or Poland (Remote)",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Andrii_Kovalenko.pdf"
+    },
+    {
+      "id": "s9e8n7a6-34df-56h9-k987-3p45q6r7t809",
+      "name": "Michael Sullivan",
+      "contact": "j9k0l1m2-78c5-4d3e-9876-fedcba543210",
+      "headline": "Global Sales Enablement Leader",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "London, UK",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+442071231987"
+        }
+      ],
+      "emails": [
+        "michael.sullivan@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/michael-sullivan-sales-enablement/"
+      ],
+      "archived": null,
+      "tags": [
+        "Head of Sales Enablement",
+        "Sales Strategy",
+        "Training & Enablement",
+        "Leadership",
+        "Revenue Growth",
+        "Full-Time"
+      ],
+      "sources": [
+        "Executive Referral"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 7,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "headhunted",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/s9e8n7a6-34df-56h9-k987-3p45q6r7t809"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "London, UK",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Michael_Sullivan.pdf"
+    },
+    {
+      "id": "i5s6a7e8-34df-56h9-k987-2l45m6n7o809",
+      "name": "Connor O'Neill",
+      "contact": "j9k0l1m2-78c5-4d3e-9876-fedcba543210",
+      "headline": "Inbound Sales Executive - UK & Ireland",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Dublin, Ireland",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+353899123456"
+        }
+      ],
+      "emails": [
+        "connor.oneill@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/connor-oneill-sales/"
+      ],
+      "archived": null,
+      "tags": [
+        "Inside Sales Account Executive",
+        "Inbound Sales",
+        "B2B Sales",
+        "Lead Conversion",
+        "UK Market",
+        "Full-Time"
+      ],
+      "sources": [
+        "LinkedIn"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 4,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/i5s6a7e8-34df-56h9-k987-2l45m6n7o809"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "Ireland (Remote)",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Connor_O'Neill.pdf"
+    },
+    {
+      "id": "s9d8r7c6-12df-45h9-j876-2m34n5o6p809",
+      "name": "Li Wei",
+      "contact": "h9j0k1l2-78c5-4d3e-9876-fedcba543210",
+      "headline": "Senior Sales Development Representative - China",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Shanghai, China",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+8613912345678"
+        }
+      ],
+      "emails": [
+        "li.wei@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/li-wei-sales/"
+      ],
+      "archived": null,
+      "tags": [
+        "Senior Sales Development Representative",
+        "B2B Sales",
+        "Enterprise Sales",
+        "APAC Market",
+        "Full-Time"
+      ],
+      "sources": [
+        "LinkedIn"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 4,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "applied",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/s9d8r7c6-12df-45h9-j876-2m34n5o6p809"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "China (Shanghai, Remote)",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Li_Wei.pdf"
+    },
+    {
+      "id": "b9p8a7u6-12df-45h9-j876-2m34n5o6p809",
+      "name": "Dmytro Ivanenko",
+      "contact": "h9j0k1l2-78c5-4d3e-9876-fedcba543210",
+      "headline": "Business Process Automation Specialist",
+      "stage": "applicant-new",
+      "confidentiality": "non-confidential",
+      "location": "Kyiv, Ukraine",
+      "phones": [
+        {
+          "type": "work",
+          "value": "+380671234567"
+        }
+      ],
+      "emails": [
+        "dmytro.ivanenko@example.com"
+      ],
+      "links": [
+        "https://www.linkedin.com/in/dmytro-ivanenko-bpa/"
+      ],
+      "archived": null,
+      "tags": [
+        "Business Process Automation",
+        "RPA",
+        "Process Optimization",
+        "AI & Machine Learning",
+        "Full-Time"
+      ],
+      "sources": [
+        "LinkedIn"
+      ],
+      "stageChanges": [
+        {
+          "toStageId": "applicant-new",
+          "toStageIndex": 5,
+          "updatedAt": 1687363652658
+        }
+      ],
+      "origin": "headhunted",
+      "sourcedBy": null,
+      "createdAt": 1687363652658,
+      "updatedAt": 1687363652981,
+      "lastInteractionAt": 1687363652668,
+      "lastAdvancedAt": 1687363652658,
+      "snoozedUntil": null,
+      "urls": {
+        "list": "https://hire.fakecompany.com/candidates",
+        "show": "https://hire.fakecompany.com/candidates/b9p8a7u6-12df-45h9-j876-2m34n5o6p809"
+      },
+      "isAnonymized": false,
+      "dataProtection": {
+        "store": {
+          "allowed": true,
+          "expiresAt": null
+        },
+        "contact": {
+          "allowed": true,
+          "expiresAt": null
+        }
+      },
+      "opportunityLocation": "Ukraine (Remote)",
+      "resume_url": "https://f000.backblazeb2.com/file/BPA-Candidates/Dmytro_Ivanenko.docx"
+    }
+  ]
+}
